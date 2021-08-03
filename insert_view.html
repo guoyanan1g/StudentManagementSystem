@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" href="bootstrap/css/jquery.datetimepicker.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/jquery.datetimepicker.full.js"></script>
+</head>
+<body>
+	<h1 class="page-header">
+		添加用户:
+	</h1>
+	<form action="insert.php" method="post" class="form-horizontal fo">
+	<div class="form-group">
+		<label for="id" class="control-label pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学号</label>
+		<div class="col-sm-9">
+			<input type="text" name="id" id="id" placeholder="id" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="name" class="control-label pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;姓名</label>
+		<div class="col-sm-9">
+			<input type="text" name="name" id="name" placeholder="姓名" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="sex" class="control-label pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别</label>
+		<div class="col-sm-9">
+			<select name="sex" id="sex" class="form-control">
+				<option value="男">男</option>
+				<option value="女">女</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="class" class="control-label pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;班级</label>
+		<div class="col-sm-9">
+			<select name="class" id="class" class="form-control">
+				<option value="1">1班</option>
+				<option value="2">2班</option>
+				<option value="3">3班</option>
+				<option value="4">4班</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="score" class="control-label pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学分绩</label>
+		<div class="col-sm-9">
+			<input type="text" name="score" id="score" placeholder="学分绩" class="form-control">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="datepicker" class="control-label pull-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;入学日期</label>
+		<div class="col-sm-9">
+			<input type="text" name="birday" id="datepicker" placeholder="入学日期" class="form-control" >
+		</div>
+	</div>
+	<button type="submit" class="btn btn-primary col-sm-10">提交</button>
+	<button type="reset" class="btn btn-danger col-sm-10">重置</button>
+	</form>
+	<script>
+		$('#datepicker').datetimepicker({
+				lang:'ch',
+				timepicker:false,
+				format:'Y-m-d',
+				formatDate:'Y-m-d',
+			}
+			);
+	</script>
+</body>
+</html>
